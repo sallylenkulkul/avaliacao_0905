@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclas</title>
+    <link rel="stylesheet" href="teclas.css">
+</head>
+
+<body>
+
+    <div class="teclado">
+        <div class="D1">
+            <button class="key" id="27">Esc</button>
+            <button class="key" id="112">F1</button>
+            <button class="key" id="113">F2</button>
+            <button class="key" id="114">F3</button>
+            <button class="key" id="115">F4</button>
+            <button class="key" id="116">F5</button>
+            <button class="key" id="117">F6</button>
+            <button class="key" id="118">F7</button>
+            <button class="key" id="119">F8</button>
+            <button class="key" id="120">F9</button>
+            <button class="key" id="121">F10</button>
+            <button class="key" id="122">F11</button>
+            <button class="key" id="123">F12</button>
+        </div>
+
+
+        <div class="D2">
+            <button class="key" id="192">`</button>
+            <button class="key" id="49">1</button>
+            <button class="key" id="50">2</button>
+            <button class="key" id="51">3</button>
+            <button class="key" id="52">4</button>
+            <button class="key" id="53">5</button>
+            <button class="key" id="54">6</button>
+            <button class="key" id="55">7</button>
+            <button class="key" id="56">8</button>
+            <button class="key" id="57">9</button>
+            <button class="key" id="48">0</button>
+            <button class="key" id="189">-</button>
+            <button class="key" id="187">=</button>
+            <button class="key" id="8">⌫</button>
+        </div>
+
+
+        <div class="D3">
+            <button class="key" id="9">Tab</button>
+            <button class="key" id="81">Q</button>
+            <button class="key" id="87">W</button>
+            <button class="key" id="69">E</button>
+            <button class="key" id="82">R</button>
+            <button class="key" id="84">T</button>
+            <button class="key" id="89">Y</button>
+            <button class="key" id="85">U</button>
+            <button class="key" id="73">I</button>
+            <button class="key" id="79">O</button>
+            <button class="key" id="80">P</button>
+            <button class="key" id="219">´</button>
+            <button class="key" id="221">[</button>
+            <button class="key" id="13">Enter</button>
+        </div>
+
+        <div class="D4">
+            <button class="key" id="20">CapsLock</button>
+            <button class="key" id="65">A</button>
+            <button class="key" id="83">S</button>
+            <button class="key" id="68">D</button>
+            <button class="key" id="70">F</button>
+            <button class="key" id="71">G</button>
+            <button class="key" id="72">H</button>
+            <button class="key" id="74">J</button>
+            <button class="key" id="75">K</button>
+            <button class="key" id="76">L</button>
+            <button class="key" id="186">Ç</button>
+            <button class="key" id="222">~</button>
+            <button class="key" id="220">]</button>
+        </div>
+
+        <div class="D5">
+            <button class="key" id="16">⇧</button>
+            <button class="key" id="226">\</button>
+            <button class="key" id="90">Z</button>
+            <button class="key" id="88">X</button>
+            <button class="key" id="67">C</button>
+            <button class="key" id="86">V</button>
+            <button class="key" id="66">B</button>
+            <button class="key" id="78">N</button>
+            <button class="key" id="77">M</button>
+            <button class="key" id="188">,</button>
+            <button class="key" id="190">.</button>
+            <button class="key" id="191">;</button>
+            <button class="key" id="193">/</button>
+            <button class="key" id="16">⇧</button>
+        </div>
+
+        <div class="D6">
+            <button class="key" id="17">Ctrl</button>
+            <button class="key" id="">Fn</button>
+            <button class="key" id="91">Windows</button>
+            <button class="key" id="18">Alt</button>
+            <button class="spacebar" id="32"></button>
+            <button class="key" id="">AltGr</button>
+            <button class="key" id="93"></button>
+            <button class="key" id="">Fn</button>
+            <button class="key" id="17">Ctrl</button>
+        </div>
+
+        <div class="setas">
+            <div class="D7">
+                <button class="D8" id="38">↑</button>
+            </div>
+            <div class="D9">
+                <button class="D10" id="37">←</button>
+                <button class="D10" id="40">↓</button>
+                <button class="D10" id="39">→</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    document.onkeydown = Pega_Tecla;
+function TirarCores() {
+    for(x=1;x<=300;x++)
+    {
+        try
+        {
+            document.getElementById(x).style.backgroundColor = "rgb(245, 216, 255)"  
+        }
+        catch(erro)
+        {
+
+        }
+    }
+}
+
+    function Pega_Tecla(e) {
+        e = e || window.event;
+
+        tecla = e.keyCode;
+        console.log(tecla);
+
+        TirarCores(); // crie uma função que primeiro tire a cor de todas as divs
+        document.getElementById(tecla).style.backgroundColor = "yellow"  
+    }
+</script>
+
+</html>
